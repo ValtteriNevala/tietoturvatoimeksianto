@@ -25,7 +25,7 @@ if (isset($requestHeaders['authorization'])) {
             //avataan kanta
             $dbcon = openDb();
             //kutsutaan funktiota tietojen lisäys
-            addTiedot($dbcon,$user);
+            addUser($dbcon,$user);
         } catch (Exception $e) {
             echo  json_encode(array("message" => "No access!!"));
         }

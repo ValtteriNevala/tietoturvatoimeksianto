@@ -70,7 +70,7 @@ function checkUser(PDO $dbcon, $user, $password){
     }
 }
 
-function addTiedot(PDO $dbcon, $user) {
+function addUser(PDO $dbcon, $user) {
     $input = json_decode(file_get_contents('php://input'));
     $etunimi = filter_var($input ->etunimi, FILTER_SANITIZE_STRING);
     $sukunimi = filter_var($input ->sukunimi, FILTER_SANITIZE_STRING);
